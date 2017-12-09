@@ -1,0 +1,48 @@
+# perform settings
+#     available press keys:
+#         escape, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f11, f12,
+#         1, 2, 3, 4, 5, 6, 7, 8, 9, 0, oem_minus, oem_7, oem_5, back,
+#         tab, q, w, e, r, t, y, u, i, o, p, Oem_3, Oem_4,
+#         a, s, d, f, g, h, j, k, l, oem_plus, oem_1, oem_6, return,
+#         z, x, c, v, b, n, m, oem_comma, oem_period, oem_2, 
+#         lwin, space, app, left, up, down, right,
+#         prtscr, home, prior, delete, end, next
+#     available option keys:
+#         shift, ctrl, alt
+c_minus_1 = alt + n
+cis_minus_1 = alt + m
+d_minus_1 = alt + oem_comma
+es_minus_1 = alt + oem_period
+e_minus_1 = alt + y
+f_minus_1 = alt + u
+fis_minus_1 = alt + i
+g_minus_1 = alt + o
+gis_minus_1 = alt + b
+a_minus_1 = alt + g
+bes_minus_1 = alt + p
+b_minus_1 = alt + oem_plus
+c = n
+cis = m
+d = oem_comma
+es = oem_period
+e = y
+f = u
+fis = i
+g = o
+gis = b
+a = g
+bes = p
+b = oem_plus
+c_plus_1 = shift + n
+cis_plus_1 = shift + m
+d_plus_1 = shift + oem_comma
+es_plus_1 = shift + oem_period
+e_plus_1 = shift + y
+f_plus_1 = shift + u
+fis_plus_1 = shift + i
+g_plus_1 = shift + o
+gis_plus_1 = shift + b
+a_plus_1 = shift + g
+bes_plus_1 = shift + p
+b_plus_1 = shift + oem_plus
+c_plus_2 = shift + f
