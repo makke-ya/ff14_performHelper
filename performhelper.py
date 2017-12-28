@@ -1,13 +1,13 @@
+""" this is a program for bird performance. """
 # -*- coding: utf-8 -*-
-import os
-import sys
-import time
 import datetime
 import re
 import pygame
 from pyhooked import Hook, KeyboardEvent#, MouseEvent
 
-class performHelper():
+class PerformHelper():
+    """ this is a class for bird performance.
+    """
     def __init__(self):
         self.settings = self.get_settings()
         self.wavs = {val: pygame.mixer.Sound("wav/{}.wav".format(key)) \
@@ -17,6 +17,8 @@ class performHelper():
         self.wav_margin = 0.05
 
     def get_settings(self, setting_name="settings.txt"):
+        """ get settings from text.
+        """
         with open(setting_name, "r") as f:
             lines = f.readlines()
 
@@ -33,7 +35,9 @@ class performHelper():
                 settings[splitline[0]] = splitline[1]
         return settings
 
-    def mainLoop(self):
+    def mainloop(self):
+        """ Endless loop in this function and get keyboard event.
+        """
         # create a hook manager
         self.hk = Hook()
         # watch for all mouse events
@@ -43,6 +47,8 @@ class performHelper():
         self.hk.hook()
 
     def handle_events(self, args):
+        """ When the keyboard event raise, this function run audio controler. 
+        """
         if isinstance(args, KeyboardEvent):
             self.now = datetime.datetime.now()
             diff = self.now - self.before_wav
@@ -52,6 +58,8 @@ class performHelper():
         #     print(args.mouse_x, args.mouse_y)
  
     def audio_contoroler(self, diff, args):
+        """ Play Audio
+        """
         if diff.total_seconds() < self.wav_margin or args.event_type != "key down":
             return
 
@@ -67,7 +75,7 @@ class performHelper():
         if key not in self.wavs.keys():
             #print("Invalid key: {}".format(key))
             return
-        
+
         print("push {}".format(key))
         # audio
         self.wavs[key].play()
@@ -77,6 +85,6 @@ if __name__ == "__main__":
     pygame.mixer.pre_init(44100, -16, 1, 512)
     pygame.init()
     pygame.mixer.set_num_channels(32)
-    screen = pygame.display.set_mode((100, 100))
-    ph = performHelper()
-    ph.mainLoop()
+    SCREEN = pygame.display.set_mode((100, 100))
+    PH = PerformHelper()
+    PH.mainloop()
