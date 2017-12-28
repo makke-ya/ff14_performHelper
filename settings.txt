@@ -9,18 +9,18 @@
 #         prtscr, home, prior, delete, end, next
 #     available option keys:
 #         shift, ctrl, alt
-c_minus_1 = alt + n
-cis_minus_1 = alt + m
-d_minus_1 = alt + oem_comma
-es_minus_1 = alt + oem_period
-e_minus_1 = alt + y
-f_minus_1 = alt + u
-fis_minus_1 = alt + i
-g_minus_1 = alt + o
-gis_minus_1 = alt + b
-a_minus_1 = alt + g
-bes_minus_1 = alt + p
-b_minus_1 = alt + oem_plus
+c_minus_1 = ctrl + n
+cis_minus_1 = ctrl + m
+d_minus_1 = ctrl + oem_comma
+es_minus_1 = ctrl + oem_period
+e_minus_1 = ctrl + y
+f_minus_1 = ctrl + u
+fis_minus_1 = ctrl + i
+g_minus_1 = ctrl + o
+gis_minus_1 = ctrl + b
+a_minus_1 = ctrl + g
+bes_minus_1 = ctrl + p
+b_minus_1 = ctrl + oem_plus
 c = n
 cis = m
 d = oem_comma
